@@ -1,0 +1,38 @@
+@mixin padding($padding) {
+  @if length($padding) == 1 {
+    padding: $padding * 8 + px;
+  }
+  @if length($padding) == 2 {
+    padding: nth($padding, 1) * 8 + px nth($padding, 2) * 8 + px;
+  }
+  @if length($padding) == 3 {
+    padding: nth($padding, 1) *
+      8 +
+      px
+      nth($padding, 2) *
+      8 +
+      px
+      nth($padding, 3) *
+      8 +
+      px;
+  }
+  @if length($padding) == 4 {
+    padding: nth($padding, 1) *
+      8 +
+      px
+      nth($padding, 2) *
+      8 +
+      px
+      nth($padding, 3) *
+      8 +
+      px
+      nth($padding, 4) *
+      8 +
+      px;
+  }
+}
+
+$modularscale: (
+  base: 12px,
+  ratio: 1.2,
+);
